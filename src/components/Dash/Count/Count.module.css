@@ -1,0 +1,44 @@
+.ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 95%;
+    height: 50vh;
+}
+
+.li{
+    width: 30%;
+    height: 20vh;
+    background-color: #280c42;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin: 10px;
+    border: 1 solid white;
+    border-radius: 20px;
+    transition: .2 all ease;
+}
+
+.span{
+    font-family: var(--font-montserrat);
+    font-size: 18pt;
+}
+
+.div{
+    text-align: center;
+}
+
+.h1{
+    font-size: 30pt;
+    margin: 10px;
+    color: #e5464c;
+}
+
+.li:hover{
+    background-color: #e5464c;
+    transform: scale(1.2);
+}

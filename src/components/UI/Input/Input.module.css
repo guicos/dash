@@ -1,0 +1,13 @@
+.input{
+  margin: 10px;
+  width: 332px;
+  height: 15px;
+  border: solid 1px #290c44;
+  border-radius: 7px;
+  padding: 10px;
+}
+
+.input:hover{
+  transform: scale(1.1);
+  border: #e5464c solid 1px;
+}

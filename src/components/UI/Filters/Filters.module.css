@@ -1,0 +1,16 @@
+.select{
+    padding: 1%;
+    border-radius: 7px;
+    border: none;
+    background: #e5464c;
+    color: white;
+    font-size: 12pt;
+    margin: 10px;
+}
+
+.div{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}

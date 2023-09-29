@@ -1,0 +1,55 @@
+.table {
+    width: 100%;
+    height: 50vh;
+    border-collapse: collapse;
+    background-color: #280c42;
+    color: white;
+    font-family: var(--font-montserrat);
+    border-radius: 20px;
+  }
+  
+  .thead .th {
+    text-align: left;
+    border-bottom: 2px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    background: #280c42;
+    border-radius: 20px;
+  }
+  
+  .thead button {
+    border: 0;
+    border-radius: none;
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+    font-size: inherit;
+    padding: 0.5em;
+    margin-bottom: 1px;
+    background: none;
+    color: white;
+  }
+  
+  .thead button.ascending::after {
+    content: '👇';
+    display: inline-block;
+    margin-left: 1em;
+  }
+  
+  .thead button.descending::after {
+    content: '☝️';
+    display: inline-block;
+    margin-left: 1em;
+  }
+  
+  .tbody td {
+    padding: 0.5em;
+    border-bottom: 1px solid #400d7273;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-radius: 20px;
+  }
+  
+  .tbody tr:hover {
+    background-color: #e5464c;
+    border-radius: 20px;
+  }
