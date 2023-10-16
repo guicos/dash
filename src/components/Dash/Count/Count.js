@@ -22,7 +22,7 @@ export default function Count(){
         { id: 5, name: 'Cargo', count: office.length },
         { id: 6, name: 'Setor', count: sector.length },
     ]
-    
+
     return(
         <section>
             <div className={styled.div}>

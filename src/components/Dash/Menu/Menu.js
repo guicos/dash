@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Modal from '../../UI/Modal/Modal';
 import AuthContext from '../../UI/Contexts/MyContext';
 import button from '../../UI/Button/Button.module.css';
+import axios from 'axios';
 
 export default function Menu(){
     const [mounted, setMounted] = React.useState(false);
@@ -20,7 +21,7 @@ export default function Menu(){
         }
         const data = new FormData();
         data.append("archive", cardFile);
-        //axios.post(`${process.env.BACK}/${config}/save`, data )
+        axios.post(`http://localhost:3001/import/${config}`, data, { headers: { Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTc0NDQyMTN9.ae8_sG_jThL80QeBk5iNYgcqvK2rpz6LAmjISEqC0aY"}} )
     }
 
     const handleUploadFile = (e) => setCardFile(e.target.files[0]);
@@ -38,7 +39,7 @@ export default function Menu(){
           <nav className={styled.nav}>
             <ul className={styled.ul}>
               <li className={styled.li}>
-                <Link to="/" className={styled.link}>
+                <Link to="/home" className={styled.link}>
                   Inicio
                 </Link>
                 <img
@@ -68,7 +69,7 @@ export default function Menu(){
                 />
               </li>
               <li className={styled.li}>
-                <Link to="/" className={styled.link}>
+                <Link to="/" className={styled.link} onClick={() => localStorage.removeItem('token')}>
                   Sair
                 </Link>
                 <img src="/icons/exit.svg" alt="sair" className={styled.icon} />

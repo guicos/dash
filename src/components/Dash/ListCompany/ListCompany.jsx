@@ -25,9 +25,9 @@ export default function ListCompany(props) {
     setData(item);
   };
 
-  const handleUpdateData = () => {
+  const handleUpdateData = (id) => {
     setMounted(false);
-    axios.put(`${process.env.BACK}/company`, data);
+    axios.patch(`http://localhost:3001/company/${id}`, data, { headers: { Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTc0NDQyMTN9.ae8_sG_jThL80QeBk5iNYgcqvK2rpz6LAmjISEqC0aY"}});
   };
   return (
     <AuthContext.Provider
@@ -129,7 +129,7 @@ export default function ListCompany(props) {
                 style={{ background: "none", border: "none" }}
                 onClick={() => handleSetOpen(item)}
               >
-                <img src="/icons/edit.svg" />
+                <img src="/icons/edit.svg"  alt="edição" />
               </button>
             </td>
             <td>{item.companyName}</td>
@@ -144,9 +144,9 @@ export default function ListCompany(props) {
             <td>
               <Link
                 style={{ color: "white", textDecoration: "none" }}
-                href={`${item.site}`}
+                to={`${item.site}`}
               >
-                <img src="/icons/navegation.svg"/>
+                <img src="/icons/navegation.svg" alt="navegação"/>
               </Link>
             </td>
             <Modal
@@ -209,7 +209,7 @@ export default function ListCompany(props) {
                     <button
                       className={button.button}
                       style={{ padding: "10px" }}
-                      onClick={() => handleUpdateData()}
+                      onClick={() => handleUpdateData(item.id)}
                     >
                       Salvar
                     </button>

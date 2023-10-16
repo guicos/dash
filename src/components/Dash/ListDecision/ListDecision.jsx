@@ -98,7 +98,7 @@ export default function ListDecision(props) {
                       <td>({item.areaCode}) {item.telephone}</td>
                       <td>{item?.office?.name || "Não Cadastrado"}</td>
                       <td>{item?.department?.name || "Não Cadastrado"}</td>
-                      <td><Link style={{ color: "white", textDecoration: "none"}} href={`${item.linkedin}`}><img src="/icons/navegation.svg"/></Link></td>
+                      <td><Link style={{ color: "white", textDecoration: "none"}} to={`${item.linkedin}`}><img src="/icons/navegation.svg" alt="navegacao"/></Link></td>
                     </tr>
                   ))
             }
