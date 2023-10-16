@@ -3,7 +3,7 @@ import axios from 'axios';
 export default async function Office(){
     const token = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJpbmFsZG9ndWlsaGVybWVAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjMxMjMiLCJpYXQiOjE2OTM4NDk3Njl9.cF-DJyaXhL9-G_0111WpLeieghRtQN7T44GNE1hczVI";
         
-    const data = await axios.get(`http://localhost:3001/office`, { headers: { Authorization: token}});
+    const data = await axios.get(`http://systembrutamarketing.com.br:21160/office`, { headers: { Authorization: token}});
 
     return data.data
 }

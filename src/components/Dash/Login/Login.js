@@ -10,7 +10,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   const handleLogin = async () => {
-    const response = await axios.post(`http://localhost:3001/auth`, data);
+    const response = await axios.post(`http://systembrutamarketing.com.br:21160/auth`, data);
     console.log(response)
     if(response.status === 201){
         localStorage.setItem('token', `Bearer ${response.data.access_token}`)

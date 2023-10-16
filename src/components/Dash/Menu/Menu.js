@@ -21,7 +21,7 @@ export default function Menu(){
         }
         const data = new FormData();
         data.append("archive", cardFile);
-        axios.post(`http://localhost:3001/import/${config}`, data, { headers: { Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTc0NDQyMTN9.ae8_sG_jThL80QeBk5iNYgcqvK2rpz6LAmjISEqC0aY"}} )
+        axios.post(`http://systembrutamarketing.com.br:21160/import/${config}`, data, { headers: { Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTc0NDQyMTN9.ae8_sG_jThL80QeBk5iNYgcqvK2rpz6LAmjISEqC0aY"}} )
     }
 
     const handleUploadFile = (e) => setCardFile(e.target.files[0]);
